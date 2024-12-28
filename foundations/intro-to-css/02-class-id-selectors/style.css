@@ -1,4 +1,16 @@
-p {
+.odd {
  background-color: rgb(255, 0, 115);
- font-family: Verdana, DejaVu Sans, sans-serif;
+ font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+#secondEl {
+    color: blue;
+    font-size: 36px;
+}
+#fourthEl {
+    background-color: rgb(0, 255, 76);
+    font-size: 24px;
+    font-weight: bold;
+}
+.fontSize {
+    font-size: 24px;
 }
