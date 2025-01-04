@@ -20,6 +20,8 @@ ul {
   list-style-type: none;
   display: flex;
   gap: 8px;
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
