@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Library</title>
+</head>
+<body>
+    <dialog>
+        <button autofocus>Close</button>
+        <form>
+            <h3> Add Book</h3>
+                <p>
+                    <label for="name">Book Title *:</label>
+                    <input type="text" id="title" name="bookTitle" required />
+                </p>
+                <p>
+                    <label for="title">Book Author *:</label>
+                    <input type="text" id="author" name="bookAuthor" required />
+                </p>
+                <p>
+                    <label for="pages">Pages *:</label>
+                    <input type="text" id="pages" name="numPages" required />
+                </p>
+                <p>
+                    <label for="read">
+                      <span>Book Read:</span>
+                    </label>
+                    <select id="read" name="book-read">
+                      <option value=true>Read</option>
+                      <option value=false>Not Read</option>
+                    </select>
+                  </p>
+        </form>
+      </dialog>
+    <button id="new-book">New Book</button>
+    <script src="main.js"> </script>
+</body>
+</html>
