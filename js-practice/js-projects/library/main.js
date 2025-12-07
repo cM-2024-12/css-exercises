@@ -15,24 +15,34 @@ function Book(title, author, pages, read) {
   };
 }
 
-function displayLibrary() {
-  myLibrary.forEach(book => {
-    console.log(book.info());
-    // OR create DOM elements to display each book
-  });
+function addBookToLibrary(book) {
+  myLibrary.push(book)
 }
+
+// function displayLibrary() {
+//   myLibrary.forEach(book => {
+//     console.log(book.info());
+//     // OR create DOM elements to display each book
+//   });
+// }
 
 const theHobbit = new Book('The Hobbit', 'JR', 295, true)  // Added missing params
 const standByMe = new Book('Stand By Me', 'McCluskey', 192, false)
 
-addBookToLibrary(theHobbit)
-addBookToLibrary(standByMe)
+
+
+const bookContainer = document.querySelector("div.book-container")
 
 function returnLibrary(){
+  bookContainer.innerHtml = '' // clear container each time
   myLibrary.forEach(book => {
-    return book
+    const bookInfo = `${book.title}, written by ${book.author}. ${book.pages}. ${book.read}`
+    const bookNode = document.createElement("div");
+    bookNode.textContent = bookInfo
+    bookContainer.appendChild(bookNode)
   })
 }
+
 
 const closeButton = document.querySelector("dialog button")
 const dialog = document.querySelector("dialog");
@@ -47,5 +57,20 @@ closeButton.addEventListener("click", () => {
   dialog.close();
 })
 
+const form = document.querySelector("form")
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const title = document.getElementById("title").value;
+  const author = document.getElementById("author").value;
+  const pages = document.getElementById("pages").value;
+  const read = document.getElementById("book-read").value === "true";
+  const newBook = new Book(title, author, pages, read);
+  addBookToLibrary(newBook);
+  form.reset();
+  dialog.close();
+  returnLibrary();
+})
 
-// Next Step is adding Data Attributie
+addBookToLibrary(theHobbit);
+addBookToLibrary(standByMe);
+returnLibrary();

@@ -7,9 +7,10 @@
     <title>Project: Library</title>
 </head>
 <body>
+    <div class="book-container">Book Container</div>
     <dialog>
-        <button autofocus>Close</button>
-        <form>
+        <button type="button" autofocus>Close</button>
+        <form id="book-form">
             <h3> Add Book</h3>
                 <p>
                     <label for="name">Book Title *:</label>
@@ -27,14 +28,15 @@
                     <label for="read">
                       <span>Book Read:</span>
                     </label>
-                    <select id="read" name="book-read">
-                      <option value=true>Read</option>
-                      <option value=false>Not Read</option>
+                    <select id="book-read" name="book-read">
+                      <option value="true">Read</option>
+                      <option value="false">Not Read</option>
                     </select>
                   </p>
+                <button type="submit">Submit</button>
         </form>
       </dialog>
-    <button id="new-book">New Book</button>
+    <button id="new-book">Add Book</button>
     <script src="main.js"> </script>
 </body>
 </html>
