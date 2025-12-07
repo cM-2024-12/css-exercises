@@ -15,9 +15,11 @@ function Book(title, author, pages, read) {
   };
 }
 
-function addBookToLibrary(book) {
-  myLibrary.push(book)
-  // take params, create a book then store it in the array
+function displayLibrary() {
+  myLibrary.forEach(book => {
+    console.log(book.info());
+    // OR create DOM elements to display each book
+  });
 }
 
 const theHobbit = new Book('The Hobbit', 'JR', 295, true)  // Added missing params
