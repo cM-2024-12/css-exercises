@@ -46,4 +46,4 @@ closeButton.addEventListener("click", () => {
 })
 
 
-// Next Step is add 
+// Next Step is adding Data Attributie
