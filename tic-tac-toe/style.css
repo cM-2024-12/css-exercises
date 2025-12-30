@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #9c9c9c;
+    padding: 2px;
+    max-width: 600px;
+    /* horizontally center */
+    margin:  0 auto; 
+    padding: 15px 15px
+}
+
+.square {
+    background-color: rgb(180, 206, 255);
+    width: 100%;
+    border: 1px solid black;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;  /* Add this */
+    align-items: center;      /* Add this */
+    font-size: 3rem;          /* Make marks bigger */
+    font-weight: bold;        /* Make them stand out */
+    cursor: pointer;          /* Show it's clickable */
+}
+
+.square:hover {
+    background-color: rgb(160, 186, 235);
+}
+
+fieldset {
+    /* display: flex; */
+    max-width: 50%;
+    margin: 0 auto;
+}
