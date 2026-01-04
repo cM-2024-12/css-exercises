@@ -90,6 +90,20 @@ form.addEventListener("submit", (e) => {
   returnLibrary();
 })
 
+// add JS Form Validation
+const allInputs = document.querySelectorAll("input")
+console.log(allInputs)
+allInputs.forEach(input => {
+  input.addEventListener("invalid", () => {
+    if (input.validity.valueMissing) {
+      input.setCustomValidity("Throw that shit in there!")
+    };
+  });
+  input.addEventListener("input", () => {
+    input.setCustomValidity(""); // Clear custom message when user starts typing
+  });
+});
+
 addBookToLibrary(theHobbit);
 addBookToLibrary(standByMe);
 returnLibrary();
